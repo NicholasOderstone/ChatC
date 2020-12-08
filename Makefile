@@ -9,16 +9,16 @@ SERVER_DIR = server
 
 OBJS = obj
 
-CLIENT_TARGET = client
-SERVER_TARGET = server
+CLIENT_TARGET = client_test
+SERVER_TARGET = server_test
 
-all: client server
+all: client_release server_release
 
-client: 
+client_release: 
 	@$(CC) $(CLIENT_DIR)/$(SRCS)/*.c $(CLIENT_DIR)/$(INCS)/*.h $(FLAGS) $(CLIENT_TARGET)
 	@echo Client created
 
-server:
+server_release:
 	@$(CC) $(SERVER_DIR)/$(SRCS)/*.c $(SERVER_DIR)/$(INCS)/*.h $(FLAGS) $(SERVER_TARGET)
 	@echo Server created
 

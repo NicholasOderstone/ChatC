@@ -85,6 +85,8 @@ int main(int argc, char **argv){
 		/* Reduce CPU usage */
 		sleep(1);
 	}
+	free(server.clients);
+	close(server.listenfd);
 
 	return EXIT_SUCCESS;
 }
